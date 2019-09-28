@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="#">
+    <table border="1px" cellpadding="7" cellspacing="0" align="center" width="550px">
+        <caption><h1>用户注册表</h1></caption>
+        <tr>
+            <th>用户名</th>
+            <td>
+                <input type="text" id="username">
+                <span></span>
+            </td>
+        </tr>
+        <tr>
+            <th>密码</th>
+            <td>
+                <input type="password" id="password">
+                <span></span>
+            </td>
+        </tr>
+        <tr>
+            <th>确认密码</th>
+            <td>
+                <input type="password" id="password-again">
+                <span></span>
+            </td>
+        </tr>
+        <tr>
+            <th>电子邮箱</th>
+            <td>
+                <input type="text" id="email">
+                <span></span>
+            </td>
+        </tr>
+        <tr>
+            <th>手机号码</th>
+            <td>
+                <input type="text" id="tel-number">
+                <span></span>
+            </td>
+        </tr>
+        <tr>
+            <th>性别</th>
+            <td>
+                <input type="radio" name="sex">男
+                <input type="radio" name="sex" checked>女
+            </td>
+        </tr>
+        <tr>
+            <th>是否有房</th>
+            <td>
+                <input type="radio" name="house" checked>有
+                <input type="radio" name="house">没有
+            </td>
+        </tr>
+        <tr>
+            <th>爱好</th>
+            <td class="like">
+                <input type="checkbox">范冰冰
+                <input type="checkbox" checked>刘亦菲
+                <input type="checkbox">佟丽娅
+                <input type="checkbox">杨颖
+                <input type="checkbox">柳岩
+            </td>
+        </tr>
+        <tr>
+            <th>户籍</th>
+            <td>
+                <select name="city" id="city">
+                    <option value="01">北京</option>
+                    <option value="02">上海</option>
+                    <option value="02">内蒙古</option>
+                    <option value="03">广东</option>
+                    <option value="04">湖北</option>
+                    <option value="04">黑龙江</option>
+                    <option value="05">四川</option>
+                    <option value="06">重庆</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>课程</th>
+            <td>
+                <select name="course" id="" size="4" multiple>
+                    <option value="001">JavaEE</option>
+                    <option value="002">web前端</option>
+                    <option value="003">数据结构</option>
+                    <option value="004">C++</option>
+                    <option value="005">汇编语言</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>头像</th>
+            <td>
+                <input type="file">
+            </td>
+        </tr>
+        <tr>
+            <th>个人介绍</th>
+            <td>
+                <textarea cols="35" rows="6" value="我是textarea的默认值"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <th>验证码</th>
+            <td>
+                <input type="text">
+                <span>8888</span>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="checkbox"> 是否阅读并同意协议
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="submit" value="提交">
+                <input type="reset" value="重置">
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
