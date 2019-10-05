@@ -1,0 +1,92 @@
+@charset "utf-8";
+/* CSS Document */
+ul{
+    list-style:square;
+    width:420px;
+    height:60px;
+}
+li{
+    float:left;
+    margin-right:30px;
+    margin-top:16px;
+}
+ a{
+    text-decoration:none;
+    font-size:13px;
+    color:#0000ff;
+}
+a:link {color: #06C}
+a:visited {color: #C30}
+a:hover {color: #C3F}	
+a:active {color: #690}
+.textstyle{
+	width:250px;
+	height:35px;
+}
+.textstyle2{
+	width:250px;
+	height:50px;
+	background-color:#06C;
+}
+.div1{
+	border:1px solid #bbbbbb;
+	width:260px;
+	height:170px;
+	position:relative;
+	top:50px;
+	right:200px;
+	float:right;
+	font:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+.div2{
+	border:0px solid #ff0000;
+	width:180px;
+	height:60px;
+	position:relative;
+	top:5px;
+	left:150px;
+	float:left;
+}
+.div2 .div3{
+	border:0px solid #ff0000;
+	width:800px;
+	height:40px;
+	text-align: right;
+	position:absolute;
+	top:5px;
+	left:150px;
+	float:left;	
+}
+.div2 .div4{
+	border:0px solid #ff0000;
+	width:100px;
+	height:30px;
+	text-align: left;
+	position:relative;
+	top:5px;
+	left:0px;
+	float:left;
+}
+.div4 .div5{
+	border:0px solid #ff0000;
+	width:800px;
+	height:40px;
+	text-align: right;
+	position:absolute;
+	top:48px;
+	left:650px;
+	float:left;
+}
+.div6{
+	position:fixed;
+}
+.div7{
+	position:fixed;
+}
+.div8{
+	position:absolute;
+	float:left;
+}
+.lex{color:#3F9}
+
+#rex{font-size:16px}
