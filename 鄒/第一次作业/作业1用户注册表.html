@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+table{
+	border-collapse:collapse;
+	margin: auto;
+}
+.td1{
+	border:2px solid #000;
+	width:200px;
+	height:40px;
+	text-align:center;
+	font-weight:bold;
+}
+.td2{
+	border:2px solid #000;
+	width:600px;
+	height:40px;
+	text-align:reght;
+	padding-left:10px;
+}
+.textstyle{
+	width:400px;
+}
+#s1{
+	border:2px solid #000;
+	width:100px;
+	height:90px;
+	text-align:center;
+	font-weight:bold;	
+}
+#s2{
+	border:2px solid #000;
+	width:500px;
+	height:90px;
+	text-align:reght;
+	font-weight:bold;
+	padding-left:10px;	
+}
+#s3{
+	border:2px solid #000;
+	width:100px;
+	height:110px;
+	text-align:center;
+	font-weight:bold;	
+}
+#s4{
+	border:2px solid #000;
+	width:500px;
+	height:110px;
+	text-align:reght;
+	font-weight:bold;
+	padding-left:10px;	
+}
+</style>
+<title>用户注册表</title>
+<table>
+	<h1 style="text-align:center;">用户注册表</h1>
+	<table>
+		<tr>
+			<td class="td1">使用名</td>
+			<td class="td2"><input type="text" class="textstyle"/></td>
+		</tr>
+		<tr>
+			<td class="td1">密码</td>
+			<td class="td2"><input type="text" class="textstyle"/></td>
+		</tr>
+		<tr>
+			<td class="td1">确认密码</td>
+			<td class="td2"><input type="text" class="textstyle"/></td>
+		</tr>
+        <tr>
+			<td class="td1">性别</td>
+			<td class="td2"><input type="radio"/>男<input type="radio"/>女</td>
+		</tr>
+		<tr>
+			<td class="td1">手机号码</td>
+			<td class="td2"><input type="text" class="textstyle"/></td>
+		</tr>		
+		<tr>
+			<td class="td1">邮箱地址</td>
+			<td class="td2"><input type="text" class="textstyle"/></td>
+		</tr>
+		<tr>
+			<td class="td1">住址</td>
+			<td class="td2"><input type="text" class="textstyle"/></td>
+		</tr>	
+		<tr>
+			<td class="td1">婚否</td>
+			<td class="td2"><input type="radio"/>是<input type="radio"/>否</td>
+		</tr>
+		<tr>
+			<td class="td1">从何处得知此网站</td>
+			<td class="td2"><input type="checkbox" onchange="sel1(this)"/>爱人<input type="checkbox" onchange="sel1(this)"/>友人
+			<input type="checkbox" onchange="sel1(this)"/>网络<input type="checkbox" onchange="sel1(this)"/>广告
+			<input type="checkbox" onchange="sel1(this)"/>书籍<input type="checkbox" onchange="sel1(this)"/>短信
+			<input type="checkbox" onchange="sel1(this)"/>同事<input type="checkbox" onchange="sel1(this)"/>父母</td>
+		</tr>
+		<tr>
+			<td class="td1">籍贯</td>
+			<td class="td2"><select id="sel">
+			<option selected="selected" value="1">北京</option>
+				<option value="0">上海</option>
+				<option value="2">山东</option>
+				<option value="3">河南</option>
+				<option value="2">山西</option>
+				<option value="2">陕西</option>
+				<option value="2">云南</option>
+				<option value="2">四川</option>
+				</select>
+			</td>	
+		</tr>
+		<tr>
+			<td  id="s1">希望学习</td>
+			<td  id="s2">
+			<select size="4"><option>JavaEE</option>
+			<option>web前端</option>
+			<option>数据结合</option>
+			<option>C++</option>
+			<option>C语言</option>
+			<option>python</option>
+			</td>
+		</tr>
+		<tr>
+			<td class="td1">个人信息证件正面</td>
+			<td class="td2"><input type="file"></td>
+		</tr>
+		<tr>
+			<td class="td1">个人信息证件背面</td>
+			<td class="td2"><input type="file"></td>
+		</tr>
+		<tr>
+			<td id="s1">学习宣言</td>
+			<td id="s2"><textarea rows="6" cols="40"></textarea></td>
+		</tr>
+		<tr>
+			<td class="td1">推荐人ID</td>
+			<td class="td2"><input type="text" class="textstyle"/>若无则填入123456</td>
+		</tr>
+			<td class="td1" colspan="2"><input type="checkbox"/>是否阅读并同意协议</td>
+		</tr>
+			<td class="td1" colspan="2"><input type="reset" value="重置"/>
+			<input type="submit"value="提交"/></td>
+		</tr>
+	</table>
+
+
+</table>
+<body>
+</body>
+</html>
