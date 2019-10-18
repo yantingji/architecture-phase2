@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>第三次作业</title>
+
+</head>
+
+<body>
+
+<script>
+//for循环 遍历数组
+var num = [11,22,33,44,55,66,77,88,99];
+for(i = 0, len = num.length, text = ""; i < len; i++) { 
+    text +=num[i];
+}console.log(text)
+
+//求数组中的最大值最小值
+function shumax(shu){
+    var max = shu[0];
+        for(var i = 0;i < shu.length; i++){
+		    if(max<shu[i]){max=shu[i];}
+			}	    
+	return[max];
+}
+var result1=shumax([1,2,3,4,5,6,7,8,9])
+console.log(result1);
+function shumin(shu){
+    var min = shu[8];
+        for(i = 0 ;i > shu.length; i++){
+		    if(min>shu[i]){min=shu[i];}
+			}	    
+	return[min];
+}
+var result2=shumin([9,8,7,6,5,4,3,2,1])
+console.log(result2);
+
+//求数组所有元素的和。
+function shuSum(shu) {
+           var sum = 0;
+           for (var i = 0; i < shu.length; i++) {
+               sum += shu[i];
+           }
+           return sum;
+       }
+console.log(shuSum([1,2,3,4,5,6,7,8,9]));
+
+
+//将数组中各元素位置如调换：例如[1,2,3,4,5]换成[5,4,3,2,1] 。
+var js = [1,2,3,4];
+var str = js.reverse();
+console.log(str);
+ 
+//将用数组中的元素用 | | 线拼接成字符串 ，再输出字符串。
+var nums = [1,2,3,4,5];
+var str = nums.join("||");
+console.log(str);
+
+//冒泡排序,将数据按照顺序进行排序:数组中有n个数，比较每相邻两个数，如果前者大于后者，就把两个数交换位置；这样一来，第一轮就可以选出一个最大的数放在最后面；那么经过 n-1（数组的 length - 1） 轮，就完成了所有数的排序。
+var arr = [3,4,1,2,9,8,5];
+var max = arr.length - 1;
+for (var j = 0;j < max;j++){
+    for (var i = 0;i < max - j;i++){
+	    if (arr[i]>arr[i + 1]){
+		var temp = arr[i];
+		arr[i] = arr[i + 1];
+		arr[i + 1] = temp;
+		}
+	}
+}
+console.log(arr);
+
+//九头鸟，有9个头，2只脚；凤凰1个头，2只脚；狮子，1个头，四只脚；问需要100个头，100只脚的动物，那么需要多少头9头鸟，多少头凤凰，多少头狮子。请用所学JS通过三次for循环嵌套循环算出答案。（两组答案:狮子14只，凤凰14只，九头鸟8只；或狮子6只，凤凰31只，九头鸟7只。）
+var z = [7,8,9,10];//已经放弃。。。。
+
+    y = arr[z] * 8 - 50;
+    x = 100 - arr[z] * 9;
+console.log(z;y;x)
+
+
+</script>
+</body>
+</html>
+
