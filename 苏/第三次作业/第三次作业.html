@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>第三次作业</title>
+	</head>
+	<body>
+    <script>
+	//使用for循环遍历数组
+	var num =[11,22,33,44,55,66,77,88,99];
+	var len =num.length;
+	var text ="";
+	    for(var i=0; i<len;i++){
+		text ="num(i)"
+		}console.log(text)
+		
+	//求数组中的最大值和最小值
+	function arrMax(arr) {
+            max = arr[0]; 
+            for (var i = 0; i < arr.length; i++) {
+
+                if (max < arr[i]) {
+                    max = arr[i];
+                }
+
+            }
+            return max;
+        }
+
+        var result1 = arrMax([1,2,3,4]);
+        console.log(result1);
+	
+		
+	</script>
+	</body>
+	</html>
