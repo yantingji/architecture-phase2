@@ -1,0 +1,139 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset="utf-8"/>
+    <title>JavaScript引用方式</title>
+    <script>
+        		
+        		
+        		
+    
+    //2.1求数组最大值
+
+     function arrMax() {
+          max = arr[0];
+          for(var i = 0; i <= arr.length; i++) {
+          if(max < arr[i]) {
+          max = arr[i];
+          }
+      }
+      return max;
+      }
+      console.log(arrMax)
+    
+      
+      //2.2 求数组最小值
+      
+      function arrMin(arr) {
+    	  min = arr[0];
+    	  for(var i = 0; i < arr.length; i++) {
+    		  if(min > arr[i]) {
+    			  min = arr[i];
+    		  }
+    	  }
+    	  return min;
+      }
+      console.log(arrMin)
+      
+      
+      //3 求数组所有元素的和
+      
+        function arrSum(arr) {
+    	  sum = 0;
+    	  for(var i = 1; i <= arr.length; i++) {
+    		  sum = sum + i;
+    	  }
+    	  return sum;
+      }
+      console.log(arrSum)
+      
+      
+      //4.将数组中的元素调换:例如 [1,2,3,4,5]换成 [5,4,3,2,1]   
+     
+      var arr = [1, 2, 3, 4, 5];
+      arr.reverse();
+      document.writeln(arr.join());
+     
+      
+      
+      
+      //1. 用for循环遍历数组
+       
+      function arrAry(arr) {
+    	  for(var i ; i <=arr.length-1; i++){
+    		  console.log(i);
+    	  }
+      }
+      console.log(arrAry)
+      
+      //5. 将数组中的元素用|线拼接成字符串，再输出字符串
+      
+         function arrSum(arr) {
+    	      sum = "0" + "|";
+    	  for(var i = 1; i <= arr.length; i++){
+    		  sum = sum + "i" +"|"
+    	  }
+      }
+      
+      
+      
+      console.log(arrSum)
+      
+      
+      var arr = new Array();
+      document.write(arr.join("|"))
+      
+      
+      //6.冒泡排序
+      
+      
+      var arr = new arrAry;
+      function bubbleSort (arr) {
+    	  var max = arr.length - 1;
+    	  for (var j = 0; j < max; j++) {
+    		  var done = true;
+    		  for (var i = 0; i < max -j; i++)
+    			  if (arr[i]) > arr[i+1]) {
+    				  var temp = arr[i];
+    				  arr[i] = arr[i + 1];
+    				  arr[i + 1] = temp;
+    				  done = false;
+    			  }
+    			  }
+    	   if (done) {
+    		   break;
+    	   }
+    	  }
+      return arr;
+      }
+      bubblesort(arr);
+      
+      //九头
+      
+      //  x 九头鸟    y 凤凰     z  狮子
+      
+      
+      for (int x = 0; x <=11; x++) {
+    	  for (int y = 0; y <= 50; y++){
+    		  for (int z = 0; z <=25; z++){
+    			  if(9 * x + y + z = 100; 2 * x + 2 * y + 4 * z =100) {
+    				  System.out.printf(x, y, z)
+    			  }
+    		  }
+    	  }
+      }
+      
+      
+      
+      
+          
+    
+    
+    </script>
+</head>
+
+<body>
+
+
+
+</body>
+</html>
