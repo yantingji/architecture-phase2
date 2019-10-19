@@ -45,12 +45,12 @@ console.log(result2);
 
 //求数组所有元素的和。
 function arraySum(array) {
-           var sum = 0;
-           for (var i = 0; i < array.length; i++) {
+    var sum = 0;
+        for (var i = 0; i < array.length; i++) {
                sum += array[i];
-           }
-           return sum;
-       }
+            }
+    return sum;
+}
 console.log(arraySum([1,2,3,4,5,6,7,8,9]));
 
 
@@ -59,9 +59,9 @@ var js = [1,2,3,4];
 var str = js.reverse();
 console.log(str);
  
-//将用数组中的元素用 | | 线拼接成字符串 ，再输出字符串。
+//将用数组中的元素用 | 线拼接成字符串 ，再输出字符串。
 var nums = [1,2,3,4,5];
-var str = nums.join("||");
+var str = nums.join("|");
 console.log(str);
 
 //冒泡排序,将数据按照顺序进行排序:数组中有n个数，比较每相邻两个数，如果前者大于后者，就把两个数交换位置；这样一来，第一轮就可以选出一个最大的数放在最后面；那么经过 n-1（数组的 length - 1） 轮，就完成了所有数的排序。
@@ -70,9 +70,9 @@ var max = array.length - 1;
 for (var j = 0;j < max;j++){
     for (var i = 0;i < max - j;i++){
 	    if (array[i]>array[i + 1]){
-		var temp = array[i];
-		array[i] = array[i + 1];
-		array[i + 1] = temp;
+		    var temp = array[i];
+		    array[i] = array[i + 1];
+		    array[i + 1] = temp;
 		}
 	}
 }
