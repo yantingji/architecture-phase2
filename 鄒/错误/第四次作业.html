@@ -67,7 +67,9 @@ h1{
 		<table>
 			<tr>
 				<td class="td_sm">用户名</td>
-				<td class="td_bg"><input type="text" id="user" class="textstyle"/></td>
+				<td class="td_bg" >
+				<input type="text" id="user" class="textstyle"/>
+				</td>
 			</tr>
 			<tr>
 				<td class="td_sm">密码</td>
@@ -154,21 +156,19 @@ h1{
 //user check
 document.getElementById("user").onblur = function (){
 	var user = document.getElementById("user").value;
+	console.log(user);
 	if(user ==""){
 	    var obj = document.createElement("span");
 	    obj.style.color ="#ff0000";
 	    var newInfoNode = document.createTextNode("用户名不能为空");
 	    obj.appendChild(newInfoNode);
-		document.getElementById("user_error_info").appendChild(obj);
+		user.parentNode.appendChild(obj);
+		
 		document.getElementById("user").style.backgroundColor ="#fa8072";
 		document.getElementById("user").style.border ="1px solid red"; 
 	}
 }
-document.getElementById("user").onfocus= function (){
-	document.getElementById("user_error_info").removeChild(document.getElementById("user_error_info").lastElementChild);
-	document.getElementById("user").style.backgroundColor ="#ffffff";
-	document.getElementById("user").style.border ="1px solid #808080"; 
-}
+
 //password check
 document.getElementById("password").onblur = function (){
 	var password = document.getElementById("password").value;
