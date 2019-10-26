@@ -151,9 +151,9 @@ h1{
 //③“是否阅读并同意协议”，只有点击前面选项卡1分钟后，提交按钮才有效
 //※另外，再用jQuery技术实现上述功能。
 
-document.getElementById("user").onblur= function () {
-	var i=document.getElementById("user").value;
-	if(i==""){
+document.getElementById("user").onblur= function (){
+	var user=document.getElementById("user").value;
+	if(user==""){
 	    var obj=document.createElement("span");
 	    obj.style.color="#ff0000";
 	    var t=document.createTextNode("用户名不能为空");
@@ -168,9 +168,9 @@ document.getElementById("user").onfocus= function (){
 	document.getElementById("user").style.backgroundColor="#ffffff";
 	document.getElementById("user").style.border="1px solid #808080"; 
 }
-document.getElementById("password1").onblur= function () {
-	var i=document.getElementById("password1").value;
-	if(i==""){
+document.getElementById("password1").onblur= function (){
+	var password1=document.getElementById("password1").value;
+	if(password1==""){
 	    var obj=document.createElement("span");
 	    obj.style.color="#ff0000";
 	    var t=document.createTextNode("密码不能为空");
@@ -185,9 +185,9 @@ document.getElementById("password1").onfocus= function (){
 	document.getElementById("password1").style.backgroundColor="#ffffff";
 	document.getElementById("password1").style.border="1px solid #808080"; 
 }
-document.getElementById("password2").onblur= function () {
-	var i=document.getElementById("password2").value;
-	if(i==""){
+document.getElementById("password2").onblur= function (){
+	var password2=document.getElementById("password2").value;
+	if(password2==""){
 	    var obj=document.createElement("span");
 	    obj.style.color="#ff0000";
 	    var t=document.createTextNode("确认密码不能为空");
@@ -202,9 +202,9 @@ document.getElementById("password2").onfocus= function (){
 	document.getElementById("password2").style.backgroundColor="#ffffff";
 	document.getElementById("password2").style.border="1px solid #808080"; 
 }
-document.getElementById("mail").onblur= function () {
-	var i=document.getElementById("mail").value;
-	if(i==""){
+document.getElementById("mail").onblur= function (){
+	var mail=document.getElementById("mail").value;
+	if(mail==""){
 	    var obj=document.createElement("span");
 	    obj.style.color="#ff0000";
 	    var t=document.createTextNode("电子邮箱不能为空");
@@ -219,9 +219,9 @@ document.getElementById("mail").onfocus= function (){
 	document.getElementById("mail").style.backgroundColor="#ffffff";
 	document.getElementById("mail").style.border="1px solid #808080"; 
 }
-document.getElementById("tel").onblur= function () {
-	var i=document.getElementById("tel").value;
-	if(i==""){
+document.getElementById("tel").onblur= function (){
+	var tel=document.getElementById("tel").value;
+	if(tel==""){
 	    var obj=document.createElement("span");
 	    obj.style.color="#ff0000";
 	    var t=document.createTextNode("手机号码不能为空");
