@@ -1,0 +1,4 @@
+电脑属性→高级系统设置→环境变量→
+1.用户变量里新建→变量名：CLASS_PATH    变量值.;%JAVA_HOME%\lib\tools.jar
+                           →变量名：JAVA_HOME    变量值D:\ITsoft\Java JDK\jre（自己的jdk-11.0.1文件夹所在位置路径）
+2.系统变量值里找到Path双击→新建→D:\ITsoft\Java JDK\bin（自己jdk-11.0.1下面bin文件夹所在路径）
