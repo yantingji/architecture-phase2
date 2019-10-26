@@ -1,0 +1,254 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>用户注册表</title>
+<style type="text/css">
+table{
+	border-collapse:collapse;
+	margin: auto;
+}
+table,tr{
+	border:2px solid #000;
+}
+h1{
+	text-align:center;
+}
+.td_sm{
+	border:2px solid #000;
+	width:100px;
+	height:40px;
+	text-align:center;
+	font-weight:bold;
+}
+.td_bg{
+	border:2px solid #000;
+	width:500px;
+	height:40px;
+	text-align:reght;
+	padding-left:10px;
+}
+.textstyle{
+	width:200px;
+}
+#coursekors_sm{
+	border:2px solid #000;
+	width:100px;
+	height:90px;
+	text-align:center;
+	font-weight:bold;	
+}
+#coursekors_bg{
+	border:2px solid #000;
+	width:500px;
+	height:90px;
+	text-align:reght;
+	font-weight:bold;
+	padding-left:10px;	
+}
+#introduction_sm{
+	border:2px solid #000;
+	width:100px;
+	height:110px;
+	text-align:center;
+	font-weight:bold;	
+}
+#introduction_bg{
+	border:2px solid #000;
+	width:500px;
+	height:110px;
+	text-align:reght;
+	font-weight:bold;
+	padding-left:10px;	
+}
+</style>
+</head>
+<body>
+	<form action="#" onsubmit="checkIP()">
+	<h1>用户注册表</h1>
+		<table>
+			<tr>
+				<td class="td_sm">用户名</td>
+				<td class="td_bg"><input type="text" id="user" class="textstyle"/><span id="aa"></span></td>
+			</tr>
+			<tr>
+				<td class="td_sm">密码</td>
+				<td class="td_bg"><input type="text" id="password1" class="textstyle"/><span id="bb"></span></td>
+			</tr>
+			<tr>
+				<td class="td_sm">确认密码</td>
+				<td class="td_bg"><input type="text" id="password2" class="textstyle"/><span id="cc"></span></td>
+			</tr>
+			<tr>
+				<td class="td_sm">电子邮箱</td>
+				<td class="td_bg"><input type="text" id="mail" class="textstyle"/><span id="dd"></span></td>
+			</tr>
+			<tr>
+				<td class="td_sm">手机号码</td>
+				<td class="td_bg"><input type="text" id="tel" class="textstyle"/><span id="ee"></span></td>
+			</tr>
+			<tr>
+				<td class="td_sm">性别</td>
+				<td class="td_bg"><input type="radio" name="sex"/>男<input type="radio" name="sex"/>女</td>
+			</tr>
+			<tr>
+				<td class="td_sm">是否有房</td>
+				<td class="td_bg"><input type="radio" name="fang"/>有<input type="radio" name="fang"/>没有</td>
+			</tr>
+			<tr>
+				<td class="td_sm">爱好</td>
+				<td class="td_bg">
+				<input type="checkbox" value="0" name="love" onclick="if(this.checked){enable()}else{disable()}" onchange="sel1(this)"/>范冰冰
+				<input type="checkbox" value="1" name="love" onclick="if(this.checked){enable()}else{disable()}" onchange="sel1(this)"/>刘亦菲
+				<input type="checkbox" value="2" name="love" onchange="sel1(this)"/>佟丽娅
+				<input type="checkbox" value="3" name="love" onchange="sel1(this)"/>杨颖
+				<input type="checkbox" value="4" name="love" onchange="sel1(this)"/>柳岩
+				</td>
+			</tr>
+			<tr>
+				<td class="td_sm">户籍</td>
+				<td class="td_bg">
+				<select id="sel">
+				<option selected="selected" value="0">北京</option>
+				<option value="1">上海</option>
+				<option value="2">济南</option>
+				<option value="3">济宁</option>
+				</select>
+				</td>
+			</tr>
+			<tr>
+				<td id="coursekors_sm">课程</td>
+				<td id="coursekors_bg">
+				<select size="4"><option>JavaEE</option>
+				<option>web前端</option>
+				<option>数据结合</option>
+				<option>C++</option>
+				</td>
+			</tr>
+			<tr>
+				<td class="td_sm">头像</td>
+				<td class="td_bg"><input type="file"></td>
+			</tr>
+			<tr>
+				<td id="introduction_sm">个人介绍</td>
+				<td id="introduction_bg"><textarea rows="6" cols="40"></textarea></td>
+			</tr>
+			<tr>
+				<td class="td_sm">验证码</td>
+				<td class="td_bg"><input type="text" class="textstyle"/>8888</td>
+			</tr>
+				<td class="td_sm" colspan="2"><input type="checkbox" onclick="if(this.checked){enable()}else{disable()}">
+				是否阅读并同意协议</td>
+			</tr>
+				<td class="td_sm" colspan="2"><input type="reset" value="重置">
+				<input type="submit" value="提交" id="accept" disabled="true"></td>
+			</tr>
+		</table>
+	</form>
+<script type="text/javascript">
+//1.用JavaScript技术实现：用户注册页面按钮事件，具体要求如下：
+//①点击提交按钮时，用户名、密码、电子邮箱、手机号码不能为空；如果为空，则空的输入框背景色变成浅红色，框的边框变成红色，
+//出现提示文字“XXXX不能为空”，在输入框的右侧。
+//②爱好栏，选择“范冰冰”则户籍为“上海”；选择”刘亦菲”户籍为“内蒙古”
+//③“是否阅读并同意协议”，只有点击前面选项卡1分钟后，提交按钮才有效
+//※另外，再用jQuery技术实现上述功能。
+
+document.getElementById("user").onblur= function () {
+	var i=document.getElementById("user").value;
+	if(i==""){
+	    var obj=document.createElement("span");
+	    obj.style.color="#ff0000";
+	    var t=document.createTextNode("用户名不能为空");
+	    obj.appendChild(t);
+		document.getElementById("aa").appendChild(obj);
+		document.getElementById("user").style.backgroundColor="#fa8072";
+		document.getElementById("user").style.border="1px solid red"; 
+	}
+}
+document.getElementById("user").onfocus= function (){
+	document.getElementById("aa").removeChild(document.getElementById("aa").lastElementChild);
+	document.getElementById("user").style.backgroundColor="#ffffff";
+	document.getElementById("user").style.border="1px solid #808080"; 
+}
+document.getElementById("password1").onblur= function () {
+	var i=document.getElementById("password1").value;
+	if(i==""){
+	    var obj=document.createElement("span");
+	    obj.style.color="#ff0000";
+	    var t=document.createTextNode("密码不能为空");
+	    obj.appendChild(t);
+		document.getElementById("bb").appendChild(obj);
+		document.getElementById("password1").style.backgroundColor="#fa8072";
+		document.getElementById("password1").style.border="1px solid red"; 
+	}
+}
+document.getElementById("password1").onfocus= function (){
+	document.getElementById("bb").removeChild(document.getElementById("bb").lastElementChild);
+	document.getElementById("password1").style.backgroundColor="#ffffff";
+	document.getElementById("password1").style.border="1px solid #808080"; 
+}
+document.getElementById("password2").onblur= function () {
+	var i=document.getElementById("password2").value;
+	if(i==""){
+	    var obj=document.createElement("span");
+	    obj.style.color="#ff0000";
+	    var t=document.createTextNode("确认密码不能为空");
+	    obj.appendChild(t);
+		document.getElementById("cc").appendChild(obj);
+		document.getElementById("password2").style.backgroundColor="#fa8072";
+		document.getElementById("password2").style.border="1px solid red"; 
+	}
+}
+document.getElementById("password2").onfocus= function (){
+	document.getElementById("cc").removeChild(document.getElementById("cc").lastElementChild);
+	document.getElementById("password2").style.backgroundColor="#ffffff";
+	document.getElementById("password2").style.border="1px solid #808080"; 
+}
+document.getElementById("mail").onblur= function () {
+	var i=document.getElementById("mail").value;
+	if(i==""){
+	    var obj=document.createElement("span");
+	    obj.style.color="#ff0000";
+	    var t=document.createTextNode("电子邮箱不能为空");
+	    obj.appendChild(t);
+		document.getElementById("dd").appendChild(obj);
+		document.getElementById("mail").style.backgroundColor="#fa8072";
+		document.getElementById("mail").style.border="1px solid red"; 
+	}
+}
+document.getElementById("mail").onfocus= function (){
+	document.getElementById("dd").removeChild(document.getElementById("dd").lastElementChild);
+	document.getElementById("mail").style.backgroundColor="#ffffff";
+	document.getElementById("mail").style.border="1px solid #808080"; 
+}
+document.getElementById("tel").onblur= function () {
+	var i=document.getElementById("tel").value;
+	if(i==""){
+	    var obj=document.createElement("span");
+	    obj.style.color="#ff0000";
+	    var t=document.createTextNode("手机号码不能为空");
+	    obj.appendChild(t);
+		document.getElementById("ee").appendChild(obj);
+		document.getElementById("tel").style.backgroundColor="#fa8072";
+		document.getElementById("tel").style.border="1px solid red"; 
+	}
+}
+document.getElementById("tel").onfocus= function (){
+	document.getElementById("ee").removeChild(document.getElementById("ee").lastElementChild);
+	document.getElementById("tel").style.backgroundColor="#ffffff";
+	document.getElementById("tel").style.border="1px solid #808080"; 
+}
+function disable(){
+    document.getElementById("accept").disabled=true
+}
+function enable(){
+    document.getElementById("accept").disabled=false
+}
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
