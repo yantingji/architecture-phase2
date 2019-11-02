@@ -3,17 +3,14 @@ git status
 git pull
 git add .
 git commit
-git pull
-git push
-
-
-
-git commit
 i
 add
 回车
 按esc键后输入
 :wq!
 按回车键
+git push
+git status
+
 
 
