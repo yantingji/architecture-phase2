@@ -1,10 +1,15 @@
 package gouzaofangfa;
 
+import ID.java.Net;
+
 public class Number {
 	private static int n1;
 	private static int n2;
 	
 	public Number(int n1,int n2) {
+		
+		Net net = new Net(1);
+		net.email1;
 	}
 
 	public int addition(int n1,int n2) {

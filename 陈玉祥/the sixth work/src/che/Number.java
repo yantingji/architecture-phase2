@@ -8,6 +8,11 @@ public class Number {
 	public Number() {
 	}
 	
+public  void method() {
+		
+		Vehicle vehicle = new Vehicle();
+		vehicle.
+	}
 	public Number(Integer n1,Integer n2) {
 		this.n1=n1;
 		this.n2=n2;
