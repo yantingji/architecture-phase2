@@ -1,20 +1,30 @@
 package che;
 
-//
-public class Vehicle {
-
-	private double speed;
-	private double size;
-
-	public  double getSpeed() {
-		return speed;
+public abstract class Vehicle {
+	 int speed;
+	 int size;
+	
+    public Vehicle() {
+		
 	}
-
-	public void setSpeed(double speed) {
-		this.speed = speed;
+	
+	public Vehicle(int speed,int size) {
 	}
+	
+	public void move() {
+	}
+	
+	public void setSpeed(int speed) {
+	}
+	
+    public void speedUp() {
+    	System.out.println("jia su");
+    }
+	
+    public void speedDown() {
+    	System.out.println("jian su");
+    	
+    }
 
 	
-
-
 }

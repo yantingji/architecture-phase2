@@ -1,7 +1,7 @@
 package smallcar;
 
 public abstract class Auto {
-	int num;;
+	int num;
 	int color;
 	int weight;
 	int speed;

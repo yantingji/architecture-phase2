@@ -1,35 +1,30 @@
 package ID.java;
 
-import che.Vehicle;
-
 public class Net {
-	private int ID ;
-	private int password;
-	private int email;
-	public  int email1;
+	int ID ;
+	int password;
+	int email;
 	
-	public Net(int id) {
-		this.ID=id;
+	public Net() {
+		
 	}
 	
-	public int getID() {
-		return ID;
-	}
-	public void setID(int iD) {
-		ID = iD;
-	}
-	public int getPassword() {
-		return password;
-	}
-	public void setPassword(int password) {
+	public Net(int ID, int password) {
+		this.ID = ID;
 		this.password = password;
+		String email = "ID" + "yantingji@itedu.com";
 	}
-	public int getEmail() {
-		return email;
-	}
-	public void setEmail(int email) {
+	
+	public Net(int ID, int password,int email) {
+		this.ID = ID;
+		this.password = password;
 		this.email = email;
 	}
+	
+	public static void main(String[] args) {
+		Net net = new Net(int ID,int password,int email);
+	}
+
 	
 
 }
