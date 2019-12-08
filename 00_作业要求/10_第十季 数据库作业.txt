@@ -20,7 +20,7 @@
 用户增加3条数据
 
 ④查询要求
-通过用户id，获取角色名；
+通过用户id，获取相应的角色名；
 
 CREATE TABLE public.t_role
 (
