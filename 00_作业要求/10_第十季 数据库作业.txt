@@ -22,6 +22,26 @@
 ④查询要求
 通过用户id，获取角色名；
 
+CREATE TABLE public.t_role
+(
+    id character varying(64)  NOT NULL,
+    name character varying(64),
+    CONSTRAINT t_role_pkey PRIMARY KEY (id)
+);
+
+insert into t_role(id,name) values ('01','管理员');
+insert into t_role(id,name) values ('02','总经理');
+
+ALTER TABLE t_user ADD role_id character varying(64);
+
+delete from t_user;
+
+insert into t_user(id,username,role_id) values ('01','yan','01');
+insert into t_user(id,username,role_id) values ('02','huang','02');
+insert into t_user(id,username,role_id) values ('03','zou','02');
+
+select t_role.name from t_user,t_role where t_user.role_id=t_role.id and t_user.id='01';
+
 ■项目一：个人主页
 基本功能需求（尽量多使用所学知识——HTML与JavaScript阶段）：
     ①在原来基础上增加图片翻转特效
